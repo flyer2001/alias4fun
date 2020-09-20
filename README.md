@@ -1,0 +1,1 @@
+# alias4fun

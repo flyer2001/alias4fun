@@ -25,14 +25,23 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yP-BG-vVF">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                             <state key="normal" title="Новая игра"/>
+                            <connections>
+                                <action selector="newGamePressed:" destination="-1" eventType="touchUpInside" id="74X-oS-pc7"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mI5-rd-OCs">
                             <rect key="frame" x="0.0" y="30" width="374" height="30"/>
                             <state key="normal" title="Продолжить игру"/>
+                            <connections>
+                                <action selector="resumeGamePressed:" destination="-1" eventType="touchUpInside" id="N5k-1Y-wnm"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEi-6K-srY">
                             <rect key="frame" x="0.0" y="60" width="374" height="30"/>
                             <state key="normal" title="Настройки"/>
+                            <connections>
+                                <action selector="setupGamePressed:" destination="-1" eventType="touchUpInside" id="Fbz-7O-JJ7"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>

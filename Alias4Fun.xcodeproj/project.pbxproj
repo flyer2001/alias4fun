@@ -17,6 +17,16 @@
 		D786F8DA251758FC00D019C4 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D786F8D8251758FC00D019C4 /* MainMenuViewController.xib */; };
 		D786F8E22517A54600D019C4 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786F8E12517A54600D019C4 /* ApplicationCoordinator.swift */; };
 		D786F8E82517A58300D019C4 /* UIWindow+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786F8E72517A58300D019C4 /* UIWindow+extension.swift */; };
+		D786F90C2517AE9F00D019C4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786F90B2517AE9F00D019C4 /* Router.swift */; };
+		D786F9112517AED200D019C4 /* MainMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786F9102517AED200D019C4 /* MainMenuRouter.swift */; };
+		D786F9182517AF3000D019C4 /* AddWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786F9162517AF3000D019C4 /* AddWordsViewController.swift */; };
+		D786F9192517AF3000D019C4 /* AddWordsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D786F9172517AF3000D019C4 /* AddWordsViewController.xib */; };
+		D786F9212517B69700D019C4 /* AddWordsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786F9202517B69700D019C4 /* AddWordsRouter.swift */; };
+		D786F9282517B72100D019C4 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786F9262517B72100D019C4 /* StatusViewController.swift */; };
+		D786F9292517B72100D019C4 /* StatusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D786F9272517B72100D019C4 /* StatusViewController.xib */; };
+		D786F9312517BCC000D019C4 /* StatusViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786F9302517BCC000D019C4 /* StatusViewRouter.swift */; };
+		D786F9382517BD1E00D019C4 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786F9362517BD1E00D019C4 /* PlayViewController.swift */; };
+		D786F9392517BD1E00D019C4 /* PlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D786F9372517BD1E00D019C4 /* PlayViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +63,16 @@
 		D786F8D8251758FC00D019C4 /* MainMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
 		D786F8E12517A54600D019C4 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		D786F8E72517A58300D019C4 /* UIWindow+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+extension.swift"; sourceTree = "<group>"; };
+		D786F90B2517AE9F00D019C4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D786F9102517AED200D019C4 /* MainMenuRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuRouter.swift; sourceTree = "<group>"; };
+		D786F9162517AF3000D019C4 /* AddWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordsViewController.swift; sourceTree = "<group>"; };
+		D786F9172517AF3000D019C4 /* AddWordsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddWordsViewController.xib; sourceTree = "<group>"; };
+		D786F9202517B69700D019C4 /* AddWordsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordsRouter.swift; sourceTree = "<group>"; };
+		D786F9262517B72100D019C4 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		D786F9272517B72100D019C4 /* StatusViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusViewController.xib; sourceTree = "<group>"; };
+		D786F9302517BCC000D019C4 /* StatusViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewRouter.swift; sourceTree = "<group>"; };
+		D786F9362517BD1E00D019C4 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		D786F9372517BD1E00D019C4 /* PlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +179,10 @@
 		D786F8D5251758B200D019C4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				D786F8E62517A57600D019C4 /* Coomon */,
+				D786F9352517BD0400D019C4 /* Play */,
+				D786F9252517B70900D019C4 /* Status */,
+				D786F9152517AF1100D019C4 /* AddWords */,
+				D786F8E62517A57600D019C4 /* Common */,
 				D786F8D6251758BA00D019C4 /* MainMenu */,
 			);
 			path = Presentation;
@@ -170,16 +193,55 @@
 			children = (
 				D786F8D7251758FC00D019C4 /* MainMenuViewController.swift */,
 				D786F8D8251758FC00D019C4 /* MainMenuViewController.xib */,
+				D786F9102517AED200D019C4 /* MainMenuRouter.swift */,
 			);
 			path = MainMenu;
 			sourceTree = "<group>";
 		};
-		D786F8E62517A57600D019C4 /* Coomon */ = {
+		D786F8E62517A57600D019C4 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D786F9072517AE5E00D019C4 /* Router */,
 				D786F8E72517A58300D019C4 /* UIWindow+extension.swift */,
 			);
-			path = Coomon;
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D786F9072517AE5E00D019C4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D786F90B2517AE9F00D019C4 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D786F9152517AF1100D019C4 /* AddWords */ = {
+			isa = PBXGroup;
+			children = (
+				D786F9162517AF3000D019C4 /* AddWordsViewController.swift */,
+				D786F9172517AF3000D019C4 /* AddWordsViewController.xib */,
+				D786F9202517B69700D019C4 /* AddWordsRouter.swift */,
+			);
+			path = AddWords;
+			sourceTree = "<group>";
+		};
+		D786F9252517B70900D019C4 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				D786F9262517B72100D019C4 /* StatusViewController.swift */,
+				D786F9272517B72100D019C4 /* StatusViewController.xib */,
+				D786F9302517BCC000D019C4 /* StatusViewRouter.swift */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		D786F9352517BD0400D019C4 /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				D786F9362517BD1E00D019C4 /* PlayViewController.swift */,
+				D786F9372517BD1E00D019C4 /* PlayViewController.xib */,
+			);
+			path = Play;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +349,9 @@
 			files = (
 				D786F8DA251758FC00D019C4 /* MainMenuViewController.xib in Resources */,
 				D786F89D251756B000D019C4 /* LaunchScreen.storyboard in Resources */,
+				D786F9392517BD1E00D019C4 /* PlayViewController.xib in Resources */,
+				D786F9192517AF3000D019C4 /* AddWordsViewController.xib in Resources */,
+				D786F9292517B72100D019C4 /* StatusViewController.xib in Resources */,
 				D786F89A251756B000D019C4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,8 +380,15 @@
 				D786F8E22517A54600D019C4 /* ApplicationCoordinator.swift in Sources */,
 				D786F8D9251758FC00D019C4 /* MainMenuViewController.swift in Sources */,
 				D786F898251756AC00D019C4 /* Alias4Fun.xcdatamodeld in Sources */,
+				D786F9112517AED200D019C4 /* MainMenuRouter.swift in Sources */,
+				D786F9382517BD1E00D019C4 /* PlayViewController.swift in Sources */,
+				D786F9282517B72100D019C4 /* StatusViewController.swift in Sources */,
+				D786F9312517BCC000D019C4 /* StatusViewRouter.swift in Sources */,
 				D786F88E251756AC00D019C4 /* AppDelegate.swift in Sources */,
+				D786F90C2517AE9F00D019C4 /* Router.swift in Sources */,
+				D786F9182517AF3000D019C4 /* AddWordsViewController.swift in Sources */,
 				D786F8E82517A58300D019C4 /* UIWindow+extension.swift in Sources */,
+				D786F9212517B69700D019C4 /* AddWordsRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

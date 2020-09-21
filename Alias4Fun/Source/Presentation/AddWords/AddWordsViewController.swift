@@ -13,11 +13,12 @@ class AddWordsViewController: UIViewController {
 
     @IBOutlet private var addWordsCountLabel: UILabel!
     @IBOutlet private var enterWordTextField: UITextField!
+    @IBOutlet var startGameButton: UIButton!
 
     // MARK: - Private Properties
 
     private var router: AddWordsRouter?
-
+    private var game = Alias4FunGame()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +28,16 @@ class AddWordsViewController: UIViewController {
     // MARK: - IBActionds
 
     @IBAction private func addWordButtonPressed(_ sender: Any) {
+        guard let word = enterWordTextField.text, !word.isEmpty else { return }
+        game.addWords(word)
+        addWordsCountLabel.text = "Добавлено слов: \(String(game.countWords))"
+        enterWordTextField.text = nil
+        startGameButton.isEnabled = true
     }
 
 
     @IBAction private func gameStartPressed(_ sender: Any) {
-        router?.showStatusScreen()
+        router?.showStatusScreen(game: game)
     }
 
 

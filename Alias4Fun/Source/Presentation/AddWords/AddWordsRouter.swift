@@ -22,8 +22,8 @@ final class AddWordsRouter: Router {
     // MARK: - Public Methods
 
     /// Открытие статус экрана
-    func showStatusScreen() {
-        let vc = StatusViewController()
+    func showStatusScreen(game: Alias4FunGame) {
+        let vc = StatusViewController(game: game)
         presentModally(vc)
     }
 

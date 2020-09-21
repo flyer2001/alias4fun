@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Приложение Alias4Fun.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

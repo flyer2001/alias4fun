@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StatusViewController" customModule="Alias4Fun" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="5rU-08-48o" id="PBU-t3-6hX"/>
+                <outlet property="gameOverLabel" destination="t2O-hQ-wKZ" id="MD5-KO-Alp"/>
                 <outlet property="round1Team1ScoreLabel" destination="bko-Ex-h1P" id="KQL-Bg-nC3"/>
                 <outlet property="round1Team2ScoreLabel" destination="6TJ-Xp-hz8" id="OKv-s0-4CR"/>
                 <outlet property="round2Team1ScoreLabel" destination="PDI-go-ZHr" id="Gjh-AI-XsH"/>
@@ -18,6 +20,7 @@
                 <outlet property="round3Team1ScroreLabel" destination="rlD-IF-9Et" id="U6k-8j-cYl"/>
                 <outlet property="round3Team2ScoreLabel" destination="IAu-M8-Qem" id="jO6-QZ-W0u"/>
                 <outlet property="roundStatusLabel" destination="fvA-Mm-eyf" id="IKJ-y7-IWE"/>
+                <outlet property="startButton" destination="yU4-VS-il8" id="d7s-Qu-dTk"/>
                 <outlet property="team1NameLabel" destination="BJo-9r-pPz" id="vyA-d2-2yo"/>
                 <outlet property="team1TotalScoreLabel" destination="rtC-q1-J4M" id="yKo-cS-VkF"/>
                 <outlet property="team2NameLabel" destination="Ih2-Up-hDe" id="Igw-vF-fnd"/>
@@ -33,6 +36,12 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Таблица очков" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aga-zf-v7H">
                     <rect key="frame" x="148.5" y="44" width="117" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="сейчас ходит:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4E8-W2-LGg">
+                    <rect key="frame" x="151" y="246.5" width="112" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -73,8 +82,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bko-Ex-h1P">
-                    <rect key="frame" x="109" y="109" width="38" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bko-Ex-h1P">
+                    <rect key="frame" x="109" y="109" width="7.5" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -157,9 +166,16 @@
                         <action selector="startRoundButtonPressed:" destination="-1" eventType="touchUpInside" id="jQ4-ou-w70"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="сейчас ходит:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4E8-W2-LGg">
-                    <rect key="frame" x="151" y="246.5" width="112" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rU-08-48o">
+                    <rect key="frame" x="10" y="39.5" width="71" height="30"/>
+                    <state key="normal" title="&lt;&lt;  Назад"/>
+                    <connections>
+                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="wet-rM-dhJ"/>
+                    </connections>
+                </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ИГРА ОКОНЧЕНА" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2O-hQ-wKZ">
+                    <rect key="frame" x="10" y="348" width="394" height="37"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="31"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -179,6 +195,7 @@
                 <constraint firstItem="Gf4-rW-d97" firstAttribute="leading" secondItem="5fL-gA-X4i" secondAttribute="leading" id="5qa-Zn-m3W"/>
                 <constraint firstItem="wBG-mF-KIQ" firstAttribute="centerY" secondItem="Ih2-Up-hDe" secondAttribute="centerY" id="6iQ-rz-DPR"/>
                 <constraint firstItem="JeB-z1-mXt" firstAttribute="centerY" secondItem="5fL-gA-X4i" secondAttribute="centerY" id="7n9-sW-FaK"/>
+                <constraint firstItem="5rU-08-48o" firstAttribute="centerY" secondItem="aga-zf-v7H" secondAttribute="centerY" id="8RH-qK-a4D"/>
                 <constraint firstItem="5fL-gA-X4i" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="94R-r3-a0k"/>
                 <constraint firstItem="IAu-M8-Qem" firstAttribute="centerY" secondItem="Ih2-Up-hDe" secondAttribute="centerY" id="9Ab-nc-oUI"/>
                 <constraint firstItem="Gf4-rW-d97" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="9Hx-HP-x5k"/>
@@ -201,12 +218,16 @@
                 <constraint firstItem="fvA-Mm-eyf" firstAttribute="top" secondItem="Gf4-rW-d97" secondAttribute="bottom" constant="20" id="Yt8-ST-bnZ"/>
                 <constraint firstItem="IAu-M8-Qem" firstAttribute="leading" secondItem="wBG-mF-KIQ" secondAttribute="trailing" constant="50" id="ZDe-Rq-sYz"/>
                 <constraint firstItem="7Zd-eM-cwE" firstAttribute="top" secondItem="4E8-W2-LGg" secondAttribute="bottom" constant="10" id="gfe-ck-1xf"/>
+                <constraint firstItem="5rU-08-48o" firstAttribute="leading" secondItem="5fL-gA-X4i" secondAttribute="leading" id="ibM-mm-rzf"/>
+                <constraint firstItem="t2O-hQ-wKZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="j7X-XA-DsH"/>
                 <constraint firstItem="rlD-IF-9Et" firstAttribute="leading" secondItem="PDI-go-ZHr" secondAttribute="trailing" constant="50" id="kCv-pn-bn7"/>
                 <constraint firstItem="Ih2-Up-hDe" firstAttribute="top" secondItem="BJo-9r-pPz" secondAttribute="bottom" constant="15" id="oaX-nQ-4oX"/>
                 <constraint firstItem="BJo-9r-pPz" firstAttribute="top" secondItem="5fL-gA-X4i" secondAttribute="bottom" constant="15" id="thh-Da-idU"/>
                 <constraint firstItem="rlD-IF-9Et" firstAttribute="centerY" secondItem="BJo-9r-pPz" secondAttribute="centerY" id="urh-EG-uu3"/>
                 <constraint firstItem="4cQ-r2-RgG" firstAttribute="centerY" secondItem="5fL-gA-X4i" secondAttribute="centerY" id="wEI-3I-0NY"/>
+                <constraint firstItem="t2O-hQ-wKZ" firstAttribute="centerY" secondItem="yU4-VS-il8" secondAttribute="centerY" id="wbY-uL-Sxx"/>
                 <constraint firstItem="rtC-q1-J4M" firstAttribute="centerX" secondItem="Jdp-B6-yca" secondAttribute="centerX" id="xAq-7F-Dwu"/>
+                <constraint firstItem="t2O-hQ-wKZ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="xBv-9k-hP2"/>
                 <constraint firstItem="aga-zf-v7H" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="y24-ad-uJB"/>
                 <constraint firstItem="BJo-9r-pPz" firstAttribute="leading" secondItem="5fL-gA-X4i" secondAttribute="leading" id="yDq-gr-bW8"/>
                 <constraint firstItem="6TJ-Xp-hz8" firstAttribute="centerY" secondItem="Ih2-Up-hDe" secondAttribute="centerY" id="yHJ-4Q-3JH"/>

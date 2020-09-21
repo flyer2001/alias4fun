@@ -27,6 +27,7 @@
 		D786F9312517BCC000D019C4 /* StatusViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786F9302517BCC000D019C4 /* StatusViewRouter.swift */; };
 		D786F9382517BD1E00D019C4 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786F9362517BD1E00D019C4 /* PlayViewController.swift */; };
 		D786F9392517BD1E00D019C4 /* PlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D786F9372517BD1E00D019C4 /* PlayViewController.xib */; };
+		D786F94225186DCF00D019C4 /* Alias4FunGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D786F94125186DCF00D019C4 /* Alias4FunGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		D786F9302517BCC000D019C4 /* StatusViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewRouter.swift; sourceTree = "<group>"; };
 		D786F9362517BD1E00D019C4 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		D786F9372517BD1E00D019C4 /* PlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayViewController.xib; sourceTree = "<group>"; };
+		D786F94125186DCF00D019C4 /* Alias4FunGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alias4FunGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		D786F8D0251757F300D019C4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D786F94025186DA100D019C4 /* Buisness Logic */,
 				D786F8D5251758B200D019C4 /* Presentation */,
 				D786F88D251756AC00D019C4 /* AppDelegate.swift */,
 				D786F8E12517A54600D019C4 /* ApplicationCoordinator.swift */,
@@ -242,6 +245,14 @@
 				D786F9372517BD1E00D019C4 /* PlayViewController.xib */,
 			);
 			path = Play;
+			sourceTree = "<group>";
+		};
+		D786F94025186DA100D019C4 /* Buisness Logic */ = {
+			isa = PBXGroup;
+			children = (
+				D786F94125186DCF00D019C4 /* Alias4FunGame.swift */,
+			);
+			path = "Buisness Logic";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +393,7 @@
 				D786F898251756AC00D019C4 /* Alias4Fun.xcdatamodeld in Sources */,
 				D786F9112517AED200D019C4 /* MainMenuRouter.swift in Sources */,
 				D786F9382517BD1E00D019C4 /* PlayViewController.swift in Sources */,
+				D786F94225186DCF00D019C4 /* Alias4FunGame.swift in Sources */,
 				D786F9282517B72100D019C4 /* StatusViewController.swift in Sources */,
 				D786F9312517BCC000D019C4 /* StatusViewRouter.swift in Sources */,
 				D786F88E251756AC00D019C4 /* AppDelegate.swift in Sources */,

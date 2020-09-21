@@ -22,8 +22,8 @@ final class StatusViewRouter: Router {
     // MARK: - Public Methods
 
     /// Открытие статус экрана
-    func showPlayScreen() {
-        let vc = PlayViewController()
+    func showPlayScreen(game: Alias4FunGame, with roundCompletion: @escaping (Alias4FunGame) -> Void) {
+        let vc = PlayViewController(game: game, with: roundCompletion)
         presentModally(vc)
     }
 

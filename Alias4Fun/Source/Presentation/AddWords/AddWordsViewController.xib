@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="addWordsCountLabel" destination="iKO-EM-Cwz" id="5Ag-pe-Vow"/>
                 <outlet property="enterWordTextField" destination="e91-eT-X6Q" id="4yN-sq-YnK"/>
+                <outlet property="startGameButton" destination="kK6-dQ-NVw" id="4cp-Nz-ffL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,7 +25,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nt6-3s-XBf">
                     <rect key="frame" x="30" y="104" width="354" height="201"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавлено слов: ХХ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKO-EM-Cwz">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавлено слов:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKO-EM-Cwz">
                             <rect key="frame" x="0.0" y="0.0" width="354" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="29"/>
                             <nil key="textColor"/>
@@ -43,7 +44,7 @@
                                 <action selector="addWordButtonPressed:" destination="-1" eventType="touchUpInside" id="bYf-9m-fOM"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kK6-dQ-NVw">
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kK6-dQ-NVw">
                             <rect key="frame" x="0.0" y="165" width="354" height="36"/>
                             <color key="backgroundColor" systemColor="systemGreenColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>

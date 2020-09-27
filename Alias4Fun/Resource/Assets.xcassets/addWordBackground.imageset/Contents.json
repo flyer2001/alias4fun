@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "экран1-фон-готово.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

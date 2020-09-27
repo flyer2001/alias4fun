@@ -22,8 +22,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addWordBackground" translatesAutoresizingMaskIntoConstraints="NO" id="NaG-7a-zWr">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nt6-3s-XBf">
-                    <rect key="frame" x="30" y="104" width="354" height="201"/>
+                    <rect key="frame" x="30" y="104" width="354" height="270.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавлено слов:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKO-EM-Cwz">
                             <rect key="frame" x="0.0" y="0.0" width="354" height="35"/>
@@ -33,22 +36,50 @@
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите слово" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e91-eT-X6Q">
                             <rect key="frame" x="0.0" y="55" width="354" height="34"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJx-l7-yGV">
-                            <rect key="frame" x="0.0" y="109" width="354" height="36"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                            <state key="normal" title="Добавить слово"/>
-                            <connections>
-                                <action selector="addWordButtonPressed:" destination="-1" eventType="touchUpInside" id="bYf-9m-fOM"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kK6-dQ-NVw">
-                            <rect key="frame" x="0.0" y="165" width="354" height="36"/>
-                            <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                            <state key="normal" title="Начать Игру">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pzg-wC-bly">
+                            <rect key="frame" x="0.0" y="109" width="354" height="100"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJx-l7-yGV">
+                                    <rect key="frame" x="254" y="0.0" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="eYA-zf-dKJ"/>
+                                        <constraint firstAttribute="width" constant="100" id="xeD-ex-0b0"/>
+                                    </constraints>
+                                    <state key="normal" image="plusButton"/>
+                                    <connections>
+                                        <action selector="addWordButtonPressed:" destination="-1" eventType="touchUpInside" id="bYf-9m-fOM"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CC-J3-mpC">
+                                    <rect key="frame" x="126.5" y="25" width="97.5" height="50.5"/>
+                                    <string key="text">Добавить 
+слово</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="7CC-J3-mpC" firstAttribute="centerY" secondItem="rJx-l7-yGV" secondAttribute="centerY" id="4rG-rF-Qpa"/>
+                                <constraint firstItem="rJx-l7-yGV" firstAttribute="top" secondItem="Pzg-wC-bly" secondAttribute="top" id="8DR-70-2LB"/>
+                                <constraint firstAttribute="bottom" secondItem="rJx-l7-yGV" secondAttribute="bottom" id="Flk-Bb-kOZ"/>
+                                <constraint firstAttribute="trailing" secondItem="rJx-l7-yGV" secondAttribute="trailing" id="LeI-bB-H7a"/>
+                                <constraint firstItem="rJx-l7-yGV" firstAttribute="leading" secondItem="7CC-J3-mpC" secondAttribute="trailing" constant="30" id="RDB-xg-QmA"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kK6-dQ-NVw">
+                            <rect key="frame" x="0.0" y="229" width="354" height="41.5"/>
+                            <color key="backgroundColor" red="0.78425365690000004" green="0.74906641240000005" blue="0.90577340129999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="kK6-dQ-NVw" secondAttribute="height" multiplier="632:74" id="oZk-4q-8Du"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="startGameButton">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
@@ -57,23 +88,37 @@
                         </button>
                     </subviews>
                 </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upArrow" translatesAutoresizingMaskIntoConstraints="NO" id="iJK-H0-Jho">
+                    <rect key="frame" x="30" y="371.5" width="160" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="iJK-H0-Jho" secondAttribute="height" multiplier="10:8" id="G2G-G0-h0M"/>
+                        <constraint firstAttribute="width" constant="160" id="aAA-ak-SPI"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NaG-7a-zWr" secondAttribute="trailing" id="AOU-j3-wUk"/>
+                <constraint firstItem="iJK-H0-Jho" firstAttribute="top" secondItem="kK6-dQ-NVw" secondAttribute="bottom" constant="-3" id="EGm-P5-RL7"/>
                 <constraint firstItem="nt6-3s-XBf" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Ldz-7y-6fz"/>
+                <constraint firstItem="NaG-7a-zWr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Y55-Qi-qon"/>
+                <constraint firstAttribute="bottom" secondItem="NaG-7a-zWr" secondAttribute="bottom" id="aOF-jJ-N08"/>
                 <constraint firstItem="nt6-3s-XBf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="ae5-dF-VpK"/>
                 <constraint firstItem="nt6-3s-XBf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="d6b-vM-GTC"/>
+                <constraint firstItem="iJK-H0-Jho" firstAttribute="leading" secondItem="kK6-dQ-NVw" secondAttribute="leading" id="enO-aW-XCB"/>
+                <constraint firstItem="NaG-7a-zWr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iuP-XS-lEN"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="65.625"/>
         </view>
     </objects>
     <resources>
+        <image name="addWordBackground" width="798" height="1330"/>
+        <image name="plusButton" width="113" height="106"/>
+        <image name="startGameButton" width="632" height="74"/>
+        <image name="upArrow" width="120" height="194"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
